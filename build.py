@@ -88,7 +88,7 @@ if __name__ == "__main__":
         with open(fname_in, encoding="utf-8") as infile:
             with open(fname_out, "w", encoding="utf-8") as outfile:
                 for line in infile:
-                    if line.startswith("#INCLUDE# "):
+                    if line.lstrip().startswith("#INCLUDE# "):
                         file_to_import = os.path.join(
                             "include", line.split()[1].strip()
                         )

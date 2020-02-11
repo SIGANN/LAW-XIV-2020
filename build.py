@@ -60,13 +60,13 @@ STYLESHEETS = [os.path.join("css", "law2019.css")]
 def include_file(infile, include_file, outfile):
     if include_file.find("navigation.html") > -1:
         short_name = infile.split(os.sep)[1]
-        with open(include_file) as ifile:
+        with open(include_file, encoding="utf-8") as ifile:
             for line in ifile:
                 if line.find(short_name) > -1:
                     line = line.replace("<li>", '<li class="active">')
                 outfile.write(line)
     else:
-        with open(include_file) as ifile:
+        with open(include_file, encoding="utf-8") as ifile:
             for line in ifile:
                 outfile.write(line)
 
@@ -85,8 +85,8 @@ if __name__ == "__main__":
         fname_in = os.path.join("pages", "%s.html" % page)
         fname_out = os.path.join(site, "%s.html" % page)
         print(os.path.abspath(fname_out))
-        with open(fname_in) as infile:
-            with open(fname_out, "w") as outfile:
+        with open(fname_in, encoding="utf-8") as infile:
+            with open(fname_out, "w", encoding="utf-8") as outfile:
                 for line in infile:
                     if line.startswith("#INCLUDE# "):
                         file_to_import = os.path.join(

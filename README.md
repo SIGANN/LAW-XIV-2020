@@ -15,4 +15,4 @@ To deploy changes:
     $ git push
 
 
-NB: Only edit the files under `pages/`, since these are the ones used by the build script. The HTML files in the repository root get overwritten on deployment.
+NB: Only edit the files under `pages/`, since these are the ones used by the build script. Any HTML files in the repository root will be overwritten on deployment.

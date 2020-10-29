@@ -52,9 +52,10 @@ import shutil
 # (2) the images to be included and (3) the style sheets to be included. Edit
 # these as needed.
 
-PAGES = ["cfp", "committee", "index", "accepted", "program", "invited", "dinner"]
+PAGES = ["cfp", "committee", "index", "accepted", "program", "invited",
+        "dinner", "virtual-conference-information"]
 IMAGES = [os.path.join("images", "logo", "LAW14_Logo.svg")]
-STYLESHEETS = [os.path.join("css", "law2019.css")]
+STYLESHEETS = [os.path.join("css", "law2020.css")]
 
 
 def include_file(infile, include_file, outfile):
